@@ -1,0 +1,18 @@
+﻿@model Genre
+<div page-header>
+    <h1>Genre detail</h1>
+</div>
+<form asp-action="Delete" asp-controller="Genre" method="post">
+    <div class="container">
+        <div class="my-3">
+            <label>Id : </label>
+            <label>@Model.Id</label>
+        </div>
+        <div class="my-3">
+            <label>Name : </label>
+            <label >@Model.Name</label>
+            <input type="hidden" name="Name" value="@Model.Name"/>
+        </div>
+        <button class="btn btn-danger">Delete</button>
+    </div>
+</form>
