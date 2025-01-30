@@ -1,0 +1,27 @@
+﻿@model PageResultSet<Movie>
+
+<div class="page-header">
+    <h1>List of Movies</h1>
+</div>
+<div class="container">
+    @if (Model.Items.Count() > 0)
+    {
+        @foreach (var item in Model.Items)
+        {
+           <partial name="_MovieCard" model="@item"/>
+        }
+
+    }
+    else
+    { 
+     <h2>No Movie found</h2>
+    }
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () { 
+        console.log("this is index page")
+        })
+    </script>
+}
